@@ -14,7 +14,12 @@ class CreatePackagesTable extends Migration
     public function up()
     {
         Schema::create('packages', function (Blueprint $table) {
-            $table->id();
+            $table->id(); //crea colonna "id" con tipo di dato BIGINT che è UNDEFINED NOTNULL AUTOINCREMENT
+            $table->string("location", 100);
+            $table->string("address");
+            $table->string("cover");
+            $table->integer("price");
+            $table->integer("days");
             $table->timestamps();
         });
     }
